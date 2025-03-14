@@ -25,20 +25,20 @@
                 <caption>Informations personnelles</caption>
                 <tr>
                     <td>Nom</td>
-                    <td><input required type="text" asp-for="Nom" ></td>
-                </tr> 
+                    <td><input type="text" asp-for="Nom"></td>
+                </tr>
                 <tr>
                     <td>Prénom</td>
-                    <td><input required type="text" asp-for="Prenom" /></td>
+                    <td><input type="text" asp-for="Prenom" /></td>
                 </tr>
                 <tr>
                     <td>Sexe</td>
                     <td>
                         <select required asp-for="Sexe">
                             <option value="">Selectionner un sexe</option>
-                            <option value="Femme">Femme</option>
-                            <option value="Homme">Homme</option>
-                            <option value="Autre">Autre</option>
+                            <option value="F">Femme</option>
+                            <option value="H">Homme</option>
+                            <option value="A">Autre</option>
                         </select>
                     </td>
                 </tr>
@@ -48,7 +48,7 @@
                 </tr>
                 <tr>
                     <td>Code Postal</td>
-                    <td><input required type="text" pattern="^\d{5}$" asp-for="CodePostal" /></td>
+                    <td><input type="number" asp-for="CodePostal" /></td>
                 </tr>
                 <tr>
                     <td>Ville</td>
@@ -56,7 +56,7 @@
                 </tr>
                 <tr>
                     <td>Adresse mail</td>
-                    <td><input required type="email" asp-for="AdresseMail" /></td>
+                    <td><input type="text" asp-for="AdresseMail" /></td>
                 </tr>
             </table>
             <br />
@@ -64,7 +64,7 @@
                 <caption>Informations formation suivie</caption>
                 <tr>
                     <td>Date début de formation</td>
-                    <td><input required type="date" min="2020-01-01" max="2021-01-01" asp-for="DateDebutFormation" /></td>
+                    <td><input type="date" asp-for="DateDebutFormation" /></td>
                 </tr>
                 <tr>
                     <td>Formation suivie</td>
@@ -72,12 +72,12 @@
                         <select required asp-for="NomFormation">
                             <option value="">Selectionner une formation</option>
                             <option value="Cobol">Formation Cobol</option>
-                            <option value="Csharp">Formation par objet</option>
+                            <option value="Csharp">Formation langage orienté objet</option>
                             <option value="Formation-double">Formation à double compétence</option>
                         </select>
                     </td>
-                </tr>          
-            </table> 
+                </tr>
+            </table>
             <br />
             <table>
                 <caption>Avis sur la formation</caption>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace TPLOCAL1.Models
 {
@@ -7,7 +8,7 @@ namespace TPLOCAL1.Models
         public int Id { get; set; }
         [Required] public string? Nom { get; set; }
         [Required] public string? Prenom { get; set; }
-        public char? Sexe { get; set; }
+        public string? Sexe { get; set; }
         public string? Adresse { get; set; }
         public int CodePostal { get; set; }
         public string? Ville { get; set; }
@@ -16,7 +17,6 @@ namespace TPLOCAL1.Models
         [Required] public string? NomFormation { get; set; }
         public string? AvisCobol { get; set; }
         public string? AvisCsharp { get; set; }
-
 
 
     }

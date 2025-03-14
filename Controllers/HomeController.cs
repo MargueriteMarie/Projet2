@@ -10,8 +10,7 @@ namespace TPLOCAL1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly TPLOCAL1DbContext? _context;
-        //methode "naturally" called by router
+               //methode "naturally" called by router
         public ActionResult Index(string id)
         {
             if (string.IsNullOrWhiteSpace(id))
@@ -25,7 +24,8 @@ namespace TPLOCAL1.Controllers
                     case "OpinionList":
 
                         var listeAvis = new OpinionList();
-                        listeAvis.GetAvis("XlmFile/DataAvis.xml");
+                        
+                        ViewBag.ListeAvis = listeAvis.GetAvis("XlmFile/DataAvis.xml");
                         return View(id);
                     
                     case "Form":
@@ -47,8 +47,7 @@ namespace TPLOCAL1.Controllers
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            //_context.Formulaires.Add(model);
-
+                     
             ViewBag.Formulaire = model;
 
             return View();
