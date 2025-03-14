@@ -51,8 +51,5 @@ td
     border: 1px solid black;
 }
 
-input:invalid 
-{
-    box-shadow: 0 0 5px 1px red;
-}
+
 
